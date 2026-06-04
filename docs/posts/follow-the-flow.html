@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow the Flow — Antonio Montanaro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="nav-brand" href="../index.html">Antonio Montanaro</a>
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#posts">Posts</a>
+            <a href="mailto:montanaro.antonio.1996@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <header class="post-hero">
+        <div class="hero-bg" style="background-image: url('../assets/videos/one-amazing-frame.png')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <a href="../index.html" class="back-link">← All posts</a>
+            <span class="post-tag">Art Installation</span>
+            <h1 class="hero-title">Follow<br><em>the Flow</em></h1>
+            <p class="post-meta">AI &amp; Fluid Simulation · Digital Art</p>
+        </div>
+    </header>
+
+    <article class="post-article">
+        <div class="post-container">
+
+            <p class="post-lead">
+                "Follow the Flow" is an immersive art installation combining AI and fluid simulation.
+                Particle movements mimic natural and sound dynamics, while AI-generated colors create a
+                constantly evolving visual flow. This fusion of data, fluid dynamics, and AI explores
+                the balance between order and chaos, nature and technology.
+            </p>
+
+            <div class="post-divider"></div>
+
+            <div class="post-media-grid" id="follow-flow-media"></div>
+
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="../index.html" class="footer-back">← Back to all posts</a>
+            <p>Antonio Montanaro · AI Research Scientist · Digital Artist</p>
+        </div>
+    </footer>
+
+    <script>
+        const mediaList = [
+            "../assets/videos/colorf.png",
+            "../assets/videos/flowerflow.jpg",
+            "../assets/videos/colorcube.png",
+        ];
+
+        const grid = document.getElementById("follow-flow-media");
+
+        mediaList.forEach(src => {
+            const ext = src.split('.').pop().toLowerCase();
+            let el;
+
+            if (["mp4", "webm", "ogg"].includes(ext)) {
+                el = document.createElement("video");
+                el.src = src;
+                el.autoplay = true;
+                el.loop = true;
+                el.muted = true;
+                el.controls = true;
+                el.addEventListener('contextmenu', e => e.preventDefault());
+            } else {
+                el = document.createElement("img");
+                el.src = src;
+                el.alt = "Follow the Flow — artwork";
+            }
+
+            grid.appendChild(el);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,68 +1,122 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Hi! I am Antonio Montanaro and this is my portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Montanaro — AI & Digital Art</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id="body">
-        <h1 id="title"></h1> <br>
-        <!-- <div id="author-list"></div> <br>
-        <div id="affiliation-list"></div>
-        <div id="footnote-list"></div><br>
-        <div id="conference"></div><br>
-        <div id="button-list"></div><br> -->
 
-        <h2>Hi, I am Antonio Montanaro and this is my 3D-AI digital art portfolio</h2>
-        <h2>My philosophy</h2>
-        I am an AI Research Scientist with a passion for physics, 3D graphics, and music animations,<br>
-         always exploring what stimulate the visual cortex of the brain and the human emotions.<br>
-        I get inspiration from the laws of nature, powered by the synergy of human creativity and artificial intelligence.<br><br>
-        
-        Let’s connect if you’re curious to learn more, collaborate, or bring some of this digital art into your world.<br><br>
-        
-        📧 Email: montanaro.antonio.1996@gmail.com<br>
-        📷 Instagram: i_am_immagina (Antonio Montanaro)<br>
+    <nav class="navbar">
+        <span class="nav-brand">Antonio Montanaro</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#posts">Posts</a>
+            <a href="mailto:montanaro.antonio.1996@gmail.com">Contact</a>
+        </div>
+    </nav>
 
-        <!-- <div id="abstract"></div><br> -->
+    <header class="hero">
+        <div class="hero-bg" style="background-image: url('assets/videos/one-amazing-frame.png')"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">AI Research Scientist &amp; Digital Artist</p>
+            <h1 class="hero-title">Where Science<br><em>Meets Art</em></h1>
+            <p class="hero-subtitle">Exploring the synergy of human creativity and artificial intelligence</p>
+            <a href="#posts" class="hero-cta">Read the posts</a>
+        </div>
+    </header>
 
-        <h2>My projects</h2>
-        <h2>Follow the Flow</h2>
-        <p id="Follow the Flow">
-            "Follow the Flow" is an immersive art installation combining AI and fluid simulation.<br>
-             Particle movements mimic natural and sound dynamics, while AI-generated colors create a constantly<br>
-              evolving visual flow. This fusion of data, fluid dynamics, and AI explores the balance between order and chaos,<br>
-               nature and technology.<br>
-        <div id="videostrailer"></div><br>
+    <section id="about" class="about-section">
+        <div class="container">
+            <span class="section-label">About</span>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Physics, 3D graphics,<br>and music animations</h2>
+                    <p>
+                        I am an AI Research Scientist with a passion for physics, 3D graphics, and music animations —
+                        always exploring what stimulates the visual cortex of the brain and human emotions.
+                        I draw inspiration from the laws of nature, powered by the synergy of human creativity and artificial intelligence.
+                    </p>
+                    <p>
+                        Let's connect if you're curious to learn more, collaborate, or bring some of this digital art into your world.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:montanaro.antonio.1996@gmail.com" class="contact-link">
+                            <span class="contact-icon">✉</span> montanaro.antonio.1996@gmail.com
+                        </a>
+                        <a href="https://www.instagram.com/i_am_immagina" target="_blank" class="contact-link">
+                            <span class="contact-icon">◈</span> i_am_immagina on Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="about-accent">
+                    <img src="assets/videos/starry_frame_modif.PNG" alt="Digital art preview" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Animated logo</h2>
-        Logo of a famous lounge bar in Turin created and animated in Blender.<br>
-        Physics simulation and 3d motions are involved with the help of AI for image backgrounds.<br>
-        <div id="videostrailer3"></div><br>
+    <section id="posts" class="posts-section">
+        <div class="container">
+            <span class="section-label">Posts</span>
+            <h2 class="section-heading">Latest work</h2>
+            <div class="posts-grid">
 
-        <h2>3D sculpting</h2>
-        Blending human creativity with machine intelligence,<br> 
-        this process uses AI-assisted tools to enhance 3D sculpting in Blender—speeding up workflows,<br> 
-        generating concept shapes, and unlocking new forms of artistic expression.<br>
-        New video generative models can then animate this contents.<br><br>
-        <div id="videostrailer2"></div><br>
+                <a class="post-card post-card--featured" href="posts/follow-the-flow.html">
+                    <div class="post-card-image" style="background-image: url('assets/videos/flowerflow.jpg')"></div>
+                    <div class="post-card-body">
+                        <span class="post-tag">Art Installation</span>
+                        <h3 class="post-title">Follow the Flow</h3>
+                        <p class="post-excerpt">
+                            An immersive art installation combining AI and fluid simulation.
+                            Particle movements mimic natural and sound dynamics, while AI-generated colors
+                            create a constantly evolving visual flow.
+                        </p>
+                        <span class="post-read-more">Read more →</span>
+                    </div>
+                </a>
 
+                <div class="post-card post-card--soon">
+                    <div class="post-card-image" style="background-image: url('assets/videos/cp_logo_white.mp4')">
+                        <div class="soon-badge">Coming soon</div>
+                    </div>
+                    <div class="post-card-body">
+                        <span class="post-tag">3D Animation</span>
+                        <h3 class="post-title">Animated Logo</h3>
+                        <p class="post-excerpt">
+                            Logo of a famous lounge bar in Turin created and animated in Blender,
+                            with physics simulation, 3D motion, and AI-generated backgrounds.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="post-card post-card--soon">
+                    <div class="post-card-image" style="background-image: url('assets/videos/marm_apollo.png')">
+                        <div class="soon-badge">Coming soon</div>
+                    </div>
+                    <div class="post-card-body">
+                        <span class="post-tag">3D Sculpting</span>
+                        <h3 class="post-title">3D Sculpting &amp; AI</h3>
+                        <p class="post-excerpt">
+                            Blending human creativity with machine intelligence — AI-assisted tools
+                            that enhance 3D sculpting workflows and unlock new forms of artistic expression.
+                        </p>
+                    </div>
+                </div>
 
-        <div id="bibtex"></div><br>
-    </div>
-    <script type="text/javascript" src="script.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="nav-brand">Antonio Montanaro</span>
+            <p>AI Research Scientist · Digital Artist · Turin, Italy</p>
+        </div>
+    </footer>
+
 </body>
+</html>
