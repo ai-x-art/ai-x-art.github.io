@@ -113,7 +113,7 @@ a {
     min-height: 600px;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 }
 
 .hero-bg {
@@ -122,6 +122,7 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transform: scaleX(-1);
 }
 
 .hero-overlay {
@@ -141,11 +142,12 @@ a {
     padding: 0 2.5rem;
     max-width: var(--container);
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding-left: 4rem;
 }
 
 .hero-eyebrow {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -169,7 +171,7 @@ a {
 }
 
 .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgba(255,255,255,0.7);
     max-width: 480px;
