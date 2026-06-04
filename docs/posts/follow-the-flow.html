@@ -14,7 +14,9 @@
         <div class="nav-links">
             <a href="../index.html#about">About</a>
             <a href="../index.html#posts">Posts</a>
-            <a href="mailto:montanaro.antonio.1996@gmail.com">Contact</a>
+            <span class="contact-toggle" onclick="toggleEmail(this)">Contact
+                <span class="email-popover">montanaro.antonio.1996@gmail.com</span>
+            </span>
         </div>
     </nav>
 
@@ -53,6 +55,18 @@
         </div>
     </footer>
 
+    <script>
+        function toggleEmail(el) {
+            const popover = el.querySelector('.email-popover');
+            popover.classList.toggle('visible');
+            document.addEventListener('click', function close(e) {
+                if (!el.contains(e.target)) {
+                    popover.classList.remove('visible');
+                    document.removeEventListener('click', close);
+                }
+            });
+        }
+    </script>
     <script>
         const mediaList = [
             "../assets/videos/colorf.png",

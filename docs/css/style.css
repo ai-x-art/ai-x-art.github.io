@@ -102,6 +102,59 @@ a {
     color: var(--accent);
 }
 
+.contact-toggle {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.contact-toggle:hover {
+    color: var(--accent);
+}
+
+.email-popover {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    background: var(--off-black);
+    color: var(--white);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    text-transform: none;
+    font-weight: 300;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    cursor: text;
+    user-select: all;
+}
+
+.email-popover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 1rem;
+    width: 8px;
+    height: 8px;
+    background: var(--off-black);
+    border-left: 1px solid rgba(255,255,255,0.12);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    transform: rotate(45deg);
+}
+
+.email-popover.visible {
+    display: block;
+}
+
 /* =============================================
    Hero (homepage)
    ============================================= */
