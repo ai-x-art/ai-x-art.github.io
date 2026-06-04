@@ -290,7 +290,7 @@ a {
 }
 
 .contact-link {
-    font-size: 0.875rem;
+    font-size: 1.05rem;
     color: var(--off-black);
     display: flex;
     align-items: center;
