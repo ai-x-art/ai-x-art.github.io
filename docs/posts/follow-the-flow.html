@@ -55,6 +55,7 @@
 
     <script>
         const mediaList = [
+            "https://www.youtube.com/embed/c64p2Q3fYHk",
             "../assets/videos/colorf.png",
             "../assets/videos/flowerflow.jpg",
             "../assets/videos/colorcube.png",
@@ -66,7 +67,14 @@
             const ext = src.split('.').pop().toLowerCase();
             let el;
 
-            if (["mp4", "webm", "ogg"].includes(ext)) {
+            if (src.includes("youtube.com/embed")) {
+                el = document.createElement("iframe");
+                el.src = src;
+                el.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                el.allowFullscreen = true;
+                el.frameBorder = "0";
+                el.style.aspectRatio = "9/16";
+            } else if (["mp4", "webm", "ogg"].includes(ext)) {
                 el = document.createElement("video");
                 el.src = src;
                 el.autoplay = true;
